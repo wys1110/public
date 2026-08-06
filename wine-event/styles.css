@@ -177,7 +177,7 @@ h1 em, h2 em { color: var(--wine); font-style: italic; }
 .section-aside { margin: 0 0 0.3rem; color: var(--ink-soft); font-size: 0.82rem; line-height: 1.6; text-align: right; }
 .lineup-side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.85rem; }
 .wine-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
-.wine-card { position: relative; min-height: 840px; padding: 1.2rem; border: 1px solid rgba(198, 163, 106, 0.35); background: linear-gradient(150deg, rgba(255, 251, 245, 0.98), rgba(231, 216, 193, 0.48)); box-shadow: 0 14px 32px rgba(47, 19, 37, 0.06); overflow: hidden; transition: transform 180ms ease, box-shadow 180ms ease; }
+.wine-card { position: relative; min-height: 900px; padding: 1.2rem; border: 1px solid rgba(198, 163, 106, 0.35); background: linear-gradient(150deg, rgba(255, 251, 245, 0.98), rgba(231, 216, 193, 0.48)); box-shadow: 0 14px 32px rgba(47, 19, 37, 0.06); overflow: hidden; transition: transform 180ms ease, box-shadow 180ms ease; }
 .wine-card:hover { transform: translateY(-4px); box-shadow: 0 20px 42px rgba(47, 19, 37, 0.13); }
 .wine-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; background: var(--wine-color, var(--brass)); }
 .wine-card::after { content: ""; position: absolute; right: -2.8rem; bottom: -3.2rem; width: 9rem; height: 9rem; border-radius: 50%; background: var(--wine-color, var(--wine)); opacity: 0.1; pointer-events: none; }
@@ -286,7 +286,7 @@ h1 em, h2 em { color: var(--wine); font-style: italic; }
   .lineup-side { align-items: flex-end; }
   .section-heading-row .secondary-button, .draw-footer .primary-button { margin-top: 0; }
   .wine-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; }
-  .wine-card { min-height: 840px; padding: 1.2rem; }
+  .wine-card { min-height: 900px; padding: 1.2rem; }
   .wine-photo { height: 154px; }
   .wine-card h3 { min-height: 6.7rem; margin-top: 1.15rem; font-size: 1.85rem; }
   .wine-guide { min-height: 4rem; font-size: 1.1rem; }
