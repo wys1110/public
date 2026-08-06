@@ -241,7 +241,7 @@ function resetEvent() {
   renderOrder();
   renderSelection();
   renderFinalBoard();
-  setSlide(3);
+  setSlide(2);
   showToast('선택 순서를 다시 뽑을 수 있습니다.');
 }
 
@@ -250,7 +250,7 @@ function setupNavigation() {
   $('#nextButton').addEventListener('click', () => setSlide(state.slideIndex + 1));
   $('#startButton').addEventListener('click', startEvent);
   $('#drawButton').addEventListener('click', drawSelectionOrder);
-  $('#goSelectionButton').addEventListener('click', () => setSlide(4));
+  $('#goSelectionButton').addEventListener('click', () => setSlide(3));
   $('#resetButton').addEventListener('click', resetEvent);
   $('#fullscreenButton').addEventListener('click', async () => {
     if (!document.fullscreenElement) await document.documentElement.requestFullscreen?.();

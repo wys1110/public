@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#241c1d" />
     <title>스탭 와인 이벤트</title>
-    <link rel="stylesheet" href="./styles.css?v=wine-photo-fit-v1" />
+    <link rel="stylesheet" href="./styles.css?v=wine-five-screens-v1" />
   </head>
   <body>
     <main class="event-app" id="eventApp">
@@ -56,44 +56,10 @@
           </div>
         </section>
 
-        <section class="slide" data-slide="1" id="rules" aria-labelledby="rulesTitle">
-          <div class="section-intro">
-            <p class="eyebrow">01 / HOW TO PLAY</p>
-            <h2 id="rulesTitle">와인을 뽑는 게 아니라,<br /><em>고르는 순서</em>를 뽑습니다.</h2>
-            <p>운은 순서에서, 취향은 선택에서 만납니다.</p>
-          </div>
-          <div class="rules-grid">
-            <article class="rule-card rule-card--accent">
-              <span class="rule-number">01</span>
-              <h3>순서 뽑기</h3>
-              <p>참석자마다 선택 순서 번호를 하나씩 뽑습니다.</p>
-            </article>
-            <article class="rule-card">
-              <span class="rule-number">02</span>
-              <h3>와인 소개</h3>
-              <p>진행자가 와인의 맛과 에피소드를 짧게 소개합니다.</p>
-            </article>
-            <article class="rule-card">
-              <span class="rule-number">03</span>
-              <h3>원하는 와인 선택</h3>
-              <p>1번부터 남은 와인 중 원하는 한 병을 직접 고릅니다.</p>
-            </article>
-            <article class="rule-card">
-              <span class="rule-number">04</span>
-              <h3>자유 교환</h3>
-              <p>모두 고른 뒤 서로 동의하면 2분간 교환할 수 있습니다.</p>
-            </article>
-          </div>
-          <aside class="host-note">
-            <span class="note-mark">HOST NOTE</span>
-            <p>선택할 때 “왜 이 와인을 골랐는지” 한마디씩만 받아주세요. 이 한마디가 행사를 살립니다.</p>
-          </aside>
-        </section>
-
-        <section class="slide" data-slide="2" id="wines" aria-labelledby="winesTitle">
+        <section class="slide" data-slide="1" id="wines" aria-labelledby="winesTitle">
           <div class="section-heading-row">
             <div>
-              <p class="eyebrow">02 / THE LINEUP</p>
+              <p class="eyebrow">01 / THE LINEUP</p>
               <h2 id="winesTitle">오늘의 와인 라인업</h2>
             </div>
             <div class="lineup-side">
@@ -103,10 +69,10 @@
           <div class="wine-grid" id="wineGrid"></div>
         </section>
 
-        <section class="slide" data-slide="3" id="draw" aria-labelledby="drawTitle">
+        <section class="slide" data-slide="2" id="draw" aria-labelledby="drawTitle">
           <div class="section-heading-row">
             <div>
-              <p class="eyebrow">03 / DRAW THE ORDER</p>
+              <p class="eyebrow">02 / DRAW THE ORDER</p>
               <h2 id="drawTitle">선택 순서를 뽑습니다</h2>
             </div>
             <button class="secondary-button" id="drawButton" type="button">순서 추첨하기 <span aria-hidden="true">↗</span></button>
@@ -131,10 +97,10 @@
           </div>
         </section>
 
-        <section class="slide" data-slide="4" id="selection" aria-labelledby="selectionTitle">
+        <section class="slide" data-slide="3" id="selection" aria-labelledby="selectionTitle">
           <div class="section-heading-row">
             <div>
-              <p class="eyebrow">04 / MAKE YOUR PICK</p>
+              <p class="eyebrow">03 / MAKE YOUR PICK</p>
               <h2 id="selectionTitle">지금 고를 사람</h2>
             </div>
             <div class="selection-counter" id="selectionCounter">0 / 0 선택 완료</div>
@@ -163,9 +129,9 @@
           </div>
         </section>
 
-        <section class="slide slide--closing" data-slide="5" id="closing" aria-labelledby="closingTitle">
+        <section class="slide slide--closing" data-slide="4" id="closing" aria-labelledby="closingTitle">
           <div class="closing-copy">
-            <p class="eyebrow">05 / TAKE IT HOME</p>
+            <p class="eyebrow">04 / TAKE IT HOME</p>
             <h2 id="closingTitle">좋은 선택은<br /><em>집에 가져가도</em> 좋습니다.</h2>
             <p>모두의 선택이 끝났습니다.<br />오늘의 와인과 오늘의 이야기를 함께 가져가세요.</p>
           </div>
@@ -180,11 +146,11 @@
       <footer class="bottombar">
         <button class="nav-button" id="prevButton" type="button" aria-label="이전 화면">←</button>
         <div class="slide-dots" id="slideDots" aria-label="화면 위치"></div>
-        <div class="slide-counter" id="slideCounter">01 / 06</div>
+        <div class="slide-counter" id="slideCounter">01 / 05</div>
         <button class="nav-button" id="nextButton" type="button" aria-label="다음 화면">→</button>
       </footer>
       <div class="toast" id="toast" role="status" aria-live="polite"></div>
     </main>
-    <script type="module" src="./app.js?v=wine-refactor-v1"></script>
+    <script type="module" src="./app.js?v=wine-five-screens-v1"></script>
   </body>
 </html>
