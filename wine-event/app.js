@@ -4,7 +4,7 @@ import {
   drawOrder,
   getAvailableBottles,
   parseParticipants,
-} from './game.mjs?v=wine-pages-v1';
+} from './game.mjs?v=wine-refactor-v1';
 
 const wineCatalog = [
   {
