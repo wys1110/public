@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&family=Song+Myung&display=swap");
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 :root {
@@ -18,8 +18,8 @@
   --line-light: rgba(244, 237, 226, 0.18);
   --shadow: 0 24px 70px rgba(47, 19, 37, 0.15);
   --shadow-dark: 0 24px 80px rgba(5, 0, 5, 0.32);
-  /* SandollCloud local font first; no commercial font binary is stored in this public repo. */
-  --display-typeface: "NatureEdgeSerif", "네이처엣지세리프", "Noto Serif KR", "Noto Serif", "Apple SD Gothic Neo", serif;
+  /* Public webfont stack; no commercial font binary is stored in this public repo. */
+  --display-typeface: "Song Myung", "송명", "Noto Serif KR", "Noto Serif", "Apple SD Gothic Neo", serif;
   --body-typeface: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
   --serif: var(--display-typeface);
   --sans: var(--body-typeface);
