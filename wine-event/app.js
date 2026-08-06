@@ -5,7 +5,6 @@ import {
   getAvailableBottles,
   parseParticipants,
 } from './game.mjs?v=wine-pages-v1';
-import { paginateWines } from './lineup.mjs?v=wine-pages-v1';
 
 const wineCatalog = [
   {
@@ -49,7 +48,6 @@ const state = {
   participants: [],
   order: [],
   selection: null,
-  lineupPage: 0,
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -88,15 +86,10 @@ function renderWines() {
     groups.set(key, group);
     return groups;
   }, new Map()).values()];
-  const pageSize = 4;
-  const pages = paginateWines(lineup, pageSize);
-  const pageIndex = Math.min(state.lineupPage, Math.max(pages.length - 1, 0));
-  const visibleWines = pages[pageIndex] || [];
-  state.lineupPage = pageIndex;
 
-  $('#wineGrid').innerHTML = visibleWines.map(({ wine, quantity }, index) => `
+  $('#wineGrid').innerHTML = lineup.map(({ wine, quantity }, index) => `
     <article class="wine-card wine-card--${wine.className}">
-      <div class="wine-index"><span>${String(pageIndex * pageSize + index + 1).padStart(2, '0')}</span><span class="wine-kind">${wine.type}${quantity > 1 ? ` · ${quantity}병` : ''}</span></div>
+      <div class="wine-index"><span>${String(index + 1).padStart(2, '0')}</span><span class="wine-kind">${wine.type}${quantity > 1 ? ` · ${quantity}병` : ''}</span></div>
       <h3>${wine.name}</h3>
       <p class="wine-guide"><span>쉽게 고르면</span>${wine.guide}</p>
       <p class="wine-description">${wine.description}</p>
@@ -108,9 +101,6 @@ function renderWines() {
       </div>
     </article>
   `).join('');
-  $('#lineupPageCounter').textContent = `${pageIndex + 1} / ${pages.length}`;
-  $('#lineupPrevButton').disabled = pageIndex === 0;
-  $('#lineupNextButton').disabled = pageIndex === pages.length - 1;
 }
 
 function renderOrder() {
@@ -219,7 +209,6 @@ function startEvent() {
   state.participants = participants;
   state.order = [];
   state.selection = createSelectionState(participants, wineCatalog);
-  state.lineupPage = 0;
   renderWines();
   message.textContent = participants.length < wineCatalog.length
     ? `좋습니다. ${participants.length}명이 시작합니다. 남은 와인은 마지막에 추가 추첨할 수 있습니다.`
@@ -260,14 +249,6 @@ function setupNavigation() {
   $('#nextButton').addEventListener('click', () => setSlide(state.slideIndex + 1));
   $('#startButton').addEventListener('click', startEvent);
   $('#drawButton').addEventListener('click', drawSelectionOrder);
-  $('#lineupPrevButton').addEventListener('click', () => {
-    state.lineupPage -= 1;
-    renderWines();
-  });
-  $('#lineupNextButton').addEventListener('click', () => {
-    state.lineupPage += 1;
-    renderWines();
-  });
   $('#goSelectionButton').addEventListener('click', () => setSlide(4));
   $('#resetButton').addEventListener('click', resetEvent);
   $('#fullscreenButton').addEventListener('click', async () => {

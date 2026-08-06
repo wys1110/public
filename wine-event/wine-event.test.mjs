@@ -8,16 +8,6 @@ import {
   getAvailableBottles,
   parseParticipants,
 } from './game.mjs';
-import { paginateWines } from './lineup.mjs';
-
-test('paginateWines splits the lineup into predictable pages', () => {
-  const wines = Array.from({ length: 10 }, (_, index) => ({ id: `wine-${index + 1}` }));
-
-  assert.deepEqual(
-    paginateWines(wines, 5),
-    [wines.slice(0, 5), wines.slice(5)],
-  );
-});
 
 test('parseParticipants accepts comma-separated names and removes blank duplicates', () => {
   assert.deepEqual(
