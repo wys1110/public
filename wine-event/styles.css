@@ -181,7 +181,7 @@ h1 em, h2 em { color: var(--wine); font-style: italic; }
 .wine-index { display: flex; justify-content: space-between; color: var(--wine); font-family: var(--serif); font-size: 1.25rem; font-style: italic; }
 .wine-kind { color: var(--ink-soft); font-family: var(--sans); font-size: 0.61rem; font-style: normal; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
 .wine-photo { display: grid; height: 154px; margin: 0.8rem -0.2rem 0; place-items: center; overflow: hidden; border: 1px solid rgba(198, 163, 106, 0.18); background: linear-gradient(145deg, rgba(255, 253, 249, 0.9), rgba(241, 230, 211, 0.72)); }
-.wine-photo img { display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0.75rem 0.8rem rgba(36, 18, 28, 0.18)); mix-blend-mode: multiply; }
+.wine-photo img { display: block; min-width: 0; min-height: 0; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0.75rem 0.8rem rgba(36, 18, 28, 0.18)); mix-blend-mode: multiply; }
 .wine-card h3 { min-height: 4.2rem; margin: 1.15rem 0 0.8rem; font-size: 1.35rem; line-height: 1.22; }
 .wine-guide { min-height: 2.65rem; margin: 0 0 0.65rem; padding: 0.48rem 0.62rem; border-left: 3px solid var(--wine-color, var(--brass)); color: var(--wine); background: rgba(198, 163, 106, 0.1); font-size: 0.74rem; font-weight: 700; line-height: 1.45; }
 .wine-guide span { display: block; margin-bottom: 0.12rem; color: var(--wine-color, var(--brass)); font-size: 0.56rem; font-weight: 900; letter-spacing: 0.04em; }
