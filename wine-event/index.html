@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#241c1d" />
+    <title>스탭파트 와인 이벤트</title>
+    <link rel="stylesheet" href="./styles.css?v=wine-pages-v2" />
+  </head>
+  <body>
+    <main class="event-app" id="eventApp">
+      <header class="topbar">
+        <a class="brand" href="#setup" aria-label="처음 화면으로 이동">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span>Staff Part / Wine Selection</span>
+        </a>
+        <div class="topbar-actions">
+          <span class="event-meta" id="eventMeta">날짜 입력 · 장소 입력</span>
+          <button class="icon-button" id="fullscreenButton" type="button">전체 화면</button>
+        </div>
+      </header>
+
+      <div class="progress-track" aria-hidden="true">
+        <span id="progressBar"></span>
+      </div>
+
+      <div class="slides" id="slides">
+        <section class="slide slide--hero is-active" data-slide="0" id="setup" aria-labelledby="setupTitle">
+          <div class="hero-copy">
+            <p class="eyebrow">Staff Part · Wine Event</p>
+            <h1 id="setupTitle">스탭 와인 이벤트</h1>
+            <p class="hero-lede">
+              순서를 뽑고, 원하는 와인을 고르는<br />
+              스탭 와인 이벤트입니다.
+            </p>
+            <div class="hero-stats" aria-label="이벤트 구성">
+              <div><strong>10</strong><span>종류</span></div>
+              <div><strong>11</strong><span>병</span></div>
+              <div><strong>1</strong><span>인 1병</span></div>
+            </div>
+          </div>
+
+          <div class="setup-card panel">
+            <div class="panel-heading">
+              <span class="panel-kicker">HOST SETUP</span>
+              <h2>참석자만 넣어주세요</h2>
+            </div>
+            <label>
+              참석자 이름 <span class="label-note">쉼표로 구분</span>
+              <textarea id="participants" rows="5" placeholder="예: 김지훈, 박서연, 이현우"></textarea>
+            </label>
+            <p class="form-hint" id="setupMessage">쉼표로 이름을 구분해주세요. 참석자는 최대 11명입니다.</p>
+            <button class="primary-button" id="startButton" type="button">
+              행사 화면 시작 <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="slide" data-slide="1" id="rules" aria-labelledby="rulesTitle">
+          <div class="section-intro">
+            <p class="eyebrow">01 / HOW TO PLAY</p>
+            <h2 id="rulesTitle">와인을 뽑는 게 아니라,<br /><em>고르는 순서</em>를 뽑습니다.</h2>
+            <p>운은 순서에서, 취향은 선택에서 만납니다.</p>
+          </div>
+          <div class="rules-grid">
+            <article class="rule-card rule-card--accent">
+              <span class="rule-number">01</span>
+              <h3>순서 뽑기</h3>
+              <p>참석자마다 선택 순서 번호를 하나씩 뽑습니다.</p>
+            </article>
+            <article class="rule-card">
+              <span class="rule-number">02</span>
+              <h3>와인 소개</h3>
+              <p>진행자가 와인의 맛과 에피소드를 짧게 소개합니다.</p>
+            </article>
+            <article class="rule-card">
+              <span class="rule-number">03</span>
+              <h3>원하는 와인 선택</h3>
+              <p>1번부터 남은 와인 중 원하는 한 병을 직접 고릅니다.</p>
+            </article>
+            <article class="rule-card">
+              <span class="rule-number">04</span>
+              <h3>자유 교환</h3>
+              <p>모두 고른 뒤 서로 동의하면 2분간 교환할 수 있습니다.</p>
+            </article>
+          </div>
+          <aside class="host-note">
+            <span class="note-mark">HOST NOTE</span>
+            <p>선택할 때 “왜 이 와인을 골랐는지” 한마디씩만 받아주세요. 이 한마디가 행사를 살립니다.</p>
+          </aside>
+        </section>
+
+        <section class="slide" data-slide="2" id="wines" aria-labelledby="winesTitle">
+          <div class="section-heading-row">
+            <div>
+              <p class="eyebrow">02 / THE LINEUP</p>
+              <h2 id="winesTitle">오늘의 와인 라인업</h2>
+            </div>
+            <div class="lineup-side">
+              <p class="section-aside">10종 · 11병<br /><strong>처음이라면 쉬운 설명부터 살펴보세요.</strong></p>
+              <div class="lineup-pagination" aria-label="라인업 페이지 이동">
+                <span>LINEUP</span>
+                <strong id="lineupPageCounter">1 / 3</strong>
+                <button class="lineup-page-button" id="lineupPrevButton" type="button" aria-label="이전 라인업" disabled>←</button>
+                <button class="lineup-page-button" id="lineupNextButton" type="button" aria-label="다음 라인업">→</button>
+              </div>
+            </div>
+          </div>
+          <div class="wine-grid" id="wineGrid"></div>
+        </section>
+
+        <section class="slide" data-slide="3" id="draw" aria-labelledby="drawTitle">
+          <div class="section-heading-row">
+            <div>
+              <p class="eyebrow">03 / DRAW THE ORDER</p>
+              <h2 id="drawTitle">선택 순서를 뽑습니다</h2>
+            </div>
+            <button class="secondary-button" id="drawButton" type="button">순서 추첨하기 <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="draw-stage panel" id="drawStage">
+            <div class="empty-state" id="drawEmpty">
+              <span class="empty-seal" aria-hidden="true">?</span>
+              <p>버튼을 누르면 오늘의 선택 순서가 정해집니다.</p>
+            </div>
+            <div class="order-table-wrap is-hidden" id="orderTableWrap">
+              <table class="order-table">
+                <thead>
+                  <tr><th>선택 순서</th><th>이름</th><th>상태</th></tr>
+                </thead>
+                <tbody id="orderTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="draw-footer">
+            <p>순서는 무작위로 섞이며, 각자 원하는 와인을 직접 선택합니다.</p>
+            <button class="primary-button is-hidden" id="goSelectionButton" type="button">선택 화면으로 이동 →</button>
+          </div>
+        </section>
+
+        <section class="slide" data-slide="4" id="selection" aria-labelledby="selectionTitle">
+          <div class="section-heading-row">
+            <div>
+              <p class="eyebrow">04 / MAKE YOUR PICK</p>
+              <h2 id="selectionTitle">지금 고를 사람</h2>
+            </div>
+            <div class="selection-counter" id="selectionCounter">0 / 0 선택 완료</div>
+          </div>
+          <div class="selection-layout">
+            <div class="chooser-card panel" id="chooserCard">
+              <span class="panel-kicker">NOW CHOOSING</span>
+              <div class="chooser-order" id="chooserOrder">—</div>
+              <h3 id="currentChooser">먼저 순서를 추첨해주세요</h3>
+              <p id="chooserPrompt">선택할 와인을 눌러주세요.</p>
+            </div>
+            <div class="available-panel">
+              <div class="available-heading">
+                <h3>남은 와인</h3>
+                <span id="availableCount">0병</span>
+              </div>
+              <div class="available-grid" id="availableBottles"></div>
+            </div>
+          </div>
+          <div class="selection-log panel">
+            <div class="available-heading">
+              <h3>선택 현황</h3>
+              <button class="text-button" id="resetButton" type="button">처음부터 다시</button>
+            </div>
+            <div class="selection-table" id="selectionTable"></div>
+          </div>
+        </section>
+
+        <section class="slide slide--closing" data-slide="5" id="closing" aria-labelledby="closingTitle">
+          <div class="closing-copy">
+            <p class="eyebrow">05 / TAKE IT HOME</p>
+            <h2 id="closingTitle">좋은 선택은<br /><em>집에 가져가도</em> 좋습니다.</h2>
+            <p>모두의 선택이 끝났습니다.<br />오늘의 와인과 오늘의 이야기를 함께 가져가세요.</p>
+          </div>
+          <div class="closing-card panel">
+            <span class="panel-kicker">SELECTION BOARD</span>
+            <div id="finalBoard" class="final-board"></div>
+            <div class="leftover-note" id="leftoverNote"></div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="bottombar">
+        <button class="nav-button" id="prevButton" type="button" aria-label="이전 화면">←</button>
+        <div class="slide-dots" id="slideDots" aria-label="화면 위치"></div>
+        <div class="slide-counter" id="slideCounter">01 / 06</div>
+        <button class="nav-button" id="nextButton" type="button" aria-label="다음 화면">→</button>
+      </footer>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </main>
+    <script type="module" src="./app.js?v=wine-pages-v4"></script>
+  </body>
+</html>
