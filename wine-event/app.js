@@ -8,37 +8,37 @@ import {
 
 const wineCatalog = [
   {
-    id: 'chandon-1', image: './assets/wines/chandon-brut.jpeg', lineupKey: 'chandon-brut', name: '샹동 브뤼 NV', type: '스파클링', className: 'sparkling', region: '호주 · 빅토리아 · 야라밸리', style: '드라이', score: '3.6', acidity: '산미 4.0', guide: '상쾌하고 가볍게 시작하기 좋아요.', description: '사과와 흰 꽃 향이 산뜻하게 이어지는 호주산 스파클링.',
+    id: 'chandon-1', image: './assets/wines/chandon-brut.jpeg', lineupKey: 'chandon-brut', name: '샹동 브뤼 NV', type: '스파클링', className: 'sparkling', region: '호주 · 빅토리아 · 야라밸리', style: '드라이', sweetness: '드라이', score: '3.6', acidity: '산미 4.0', guide: '상쾌하고 가볍게 시작하기 좋아요.', description: '사과와 흰 꽃 향이 산뜻하게 이어지는 호주산 스파클링.',
   },
   {
-    id: 'chandon-2', image: './assets/wines/chandon-brut.jpeg', lineupKey: 'chandon-brut', name: '샹동 브뤼 NV', type: '스파클링', className: 'sparkling', region: '호주 · 빅토리아 · 야라밸리', style: '드라이', score: '3.6', acidity: '산미 4.0', guide: '상쾌하고 가볍게 시작하기 좋아요.', description: '사과와 흰 꽃 향이 산뜻하게 이어지는 호주산 스파클링.',
+    id: 'chandon-2', image: './assets/wines/chandon-brut.jpeg', lineupKey: 'chandon-brut', name: '샹동 브뤼 NV', type: '스파클링', className: 'sparkling', region: '호주 · 빅토리아 · 야라밸리', style: '드라이', sweetness: '드라이', score: '3.6', acidity: '산미 4.0', guide: '상쾌하고 가볍게 시작하기 좋아요.', description: '사과와 흰 꽃 향이 산뜻하게 이어지는 호주산 스파클링.',
   },
   {
-    id: 'malbec', image: './assets/wines/el-enemigo-malbec.png', name: '엘 에네미고 말벡 2022', type: '레드', className: 'red', region: '아르헨티나 · 멘도사', style: '드라이', score: '4.3', acidity: '산미 4.0', guide: '진하고 과일 향이 느껴지는 레드예요.', description: '검은 과실과 부드러운 향신료가 느껴지는 힘 있는 말벡.',
+    id: 'malbec', image: './assets/wines/el-enemigo-malbec.png', name: '엘 에네미고 말벡 2022', type: '레드', className: 'red', region: '아르헨티나 · 멘도사', style: '드라이', sweetness: '드라이', score: '4.3', acidity: '산미 4.0', guide: '진하고 과일 향이 느껴지는 레드예요.', description: '검은 과실과 부드러운 향신료가 느껴지는 힘 있는 말벡.',
   },
   {
-    id: 'russian-jack', image: './assets/wines/russian-jack-pinot-noir.png', name: '러시안 잭 피노 누아 2022', type: '레드', className: 'red', region: '뉴질랜드 · 마틴버러', style: '드라이', score: '3.7', acidity: '산미 3.5', guide: '레드지만 부드럽고 가벼운 편이에요.', description: '붉은 베리와 은은한 허브 향이 가볍고 우아하게 이어집니다.',
+    id: 'russian-jack', image: './assets/wines/russian-jack-pinot-noir.png', name: '러시안 잭 피노 누아 2022', type: '레드', className: 'red', region: '뉴질랜드 · 마틴버러', style: '드라이', sweetness: '드라이', score: '3.7', acidity: '산미 3.5', guide: '레드지만 부드럽고 가벼운 편이에요.', description: '붉은 베리와 은은한 허브 향이 가볍고 우아하게 이어집니다.',
   },
   {
-    id: 'saracco', image: './assets/wines/saracco-moscato.jpg', name: '사라코 모스카토 다스티 2025', type: '스위트', className: 'sweet', region: '이탈리아 · 피에몬테', style: '스위트', score: '4.1', acidity: '산미 3.5', guide: '달콤한 와인을 좋아하면 골라보세요.', description: '복숭아와 오렌지꽃 향, 낮은 알코올의 달콤한 모스카토.',
+    id: 'saracco', image: './assets/wines/saracco-moscato.jpg', name: '사라코 모스카토 다스티 2025', type: '스위트', className: 'sweet', region: '이탈리아 · 피에몬테', style: '스위트', sweetness: '달콤', score: '4.1', acidity: '산미 3.5', guide: '달콤한 와인을 좋아하면 골라보세요.', description: '복숭아와 오렌지꽃 향, 낮은 알코올의 달콤한 모스카토.',
   },
   {
-    id: 'mcmanis', image: './assets/wines/mcmanis-viognier.png', name: '맥매니스 비오니에 2024', type: '화이트', className: 'white', region: '미국 · 캘리포니아', style: '과실 풍부', score: '3.8', acidity: '산미 2.5', guide: '향긋하고 부드러운 화이트예요.', description: '복숭아와 배의 풍성한 과실 향, 벨벳처럼 부드러운 질감.',
+    id: 'mcmanis', image: './assets/wines/mcmanis-viognier.png', name: '맥매니스 비오니에 2024', type: '화이트', className: 'white', region: '미국 · 캘리포니아', style: '과실 풍부', sweetness: '드라이', score: '3.8', acidity: '산미 2.5', guide: '향긋하고 부드러운 화이트예요.', description: '복숭아와 배의 풍성한 과실 향, 벨벳처럼 부드러운 질감.',
   },
   {
-    id: 'tapi', image: './assets/wines/tapi-sauvignon-blanc.png', name: '타피 소비뇽 블랑 2025', type: '화이트', className: 'white', region: '뉴질랜드 · 말보로', style: '드라이', score: '4.1', acidity: '산미 4.5', guide: '상큼하고 시원한 느낌을 좋아하면 좋아요.', description: '라임과 자몽 같은 시트러스가 또렷한 상쾌한 화이트.',
+    id: 'tapi', image: './assets/wines/tapi-sauvignon-blanc.png', name: '타피 소비뇽 블랑 2025', type: '화이트', className: 'white', region: '뉴질랜드 · 말보로', style: '드라이', sweetness: '드라이', score: '4.1', acidity: '산미 4.5', guide: '상큼하고 시원한 느낌을 좋아하면 좋아요.', description: '라임과 자몽 같은 시트러스가 또렷한 상쾌한 화이트.',
   },
   {
-    id: 'cloudy-bay', image: './assets/wines/cloudy-bay-sauvignon-blanc.png', name: '클라우디 베이 소비뇽 블랑 2025', type: '화이트', className: 'white', region: '뉴질랜드 · 말보로', style: '드라이', score: '4.1', acidity: '산미 4.5', guide: '향이 선명하고 상큼한 화이트예요.', description: '패션프루트와 허브 향이 선명한 뉴질랜드 대표 소비뇽 블랑.',
+    id: 'cloudy-bay', image: './assets/wines/cloudy-bay-sauvignon-blanc.png', name: '클라우디 베이 소비뇽 블랑 2025', type: '화이트', className: 'white', region: '뉴질랜드 · 말보로', style: '드라이', sweetness: '드라이', score: '4.1', acidity: '산미 4.5', guide: '향이 선명하고 상큼한 화이트예요.', description: '패션프루트와 허브 향이 선명한 뉴질랜드 대표 소비뇽 블랑.',
   },
   {
-    id: 'brancaia', image: './assets/wines/brancaia-tre.jpg', name: '브란까이아 트레', type: '레드', className: 'red', region: '이탈리아 · 토스카나', style: '드라이', score: '3.8', acidity: '산미 3.5', guide: '무난하고 균형 잡힌 레드를 찾는다면 좋아요.', description: '붉은 과실과 허브, 은은한 오크가 균형을 이루는 토스카나 레드.',
+    id: 'brancaia', image: './assets/wines/brancaia-tre.jpg', name: '브란까이아 트레', type: '레드', className: 'red', region: '이탈리아 · 토스카나', style: '드라이', sweetness: '드라이', score: '3.8', acidity: '산미 3.5', guide: '무난하고 균형 잡힌 레드를 찾는다면 좋아요.', description: '붉은 과실과 허브, 은은한 오크가 균형을 이루는 토스카나 레드.',
   },
   {
-    id: 'josh', image: './assets/wines/josh-reserve-cabernet.png', name: '조쉬 리저브 카베르네 소비뇽 2023', type: '레드', className: 'red', region: '미국 · 캘리포니아', style: '과실 풍부', score: '4.0', acidity: '산미 3.0', guide: '진하지만 부드러운 레드를 좋아하면 골라보세요.', description: '잘 익은 블랙베리와 바닐라가 부드럽게 이어지는 캘리포니아 레드.',
+    id: 'josh', image: './assets/wines/josh-reserve-cabernet.png', name: '조쉬 리저브 카베르네 소비뇽 2023', type: '레드', className: 'red', region: '미국 · 캘리포니아', style: '과실 풍부', sweetness: '드라이', score: '4.0', acidity: '산미 3.0', guide: '진하지만 부드러운 레드를 좋아하면 골라보세요.', description: '잘 익은 블랙베리와 바닐라가 부드럽게 이어지는 캘리포니아 레드.',
   },
   {
-    id: 'bread-butter', image: './assets/wines/bread-butter-cabernet.png', name: '브레드 앤 버터 카베르네 소비뇽 2022', type: '레드', className: 'red', region: '미국 · 캘리포니아', style: '달큰한 인상', score: '3.9', acidity: '산미 2.5', guide: '달큰하고 편안한 레드를 찾는 분께 좋아요.', description: '잘 익은 과실과 바닐라, 오크 향이 편안하게 이어지는 레드.',
+    id: 'bread-butter', image: './assets/wines/bread-butter-cabernet.png', name: '브레드 앤 버터 카베르네 소비뇽 2022', type: '레드', className: 'red', region: '미국 · 캘리포니아', style: '달큰한 인상', sweetness: '드라이', score: '3.9', acidity: '산미 2.5', guide: '달큰하고 편안한 레드를 찾는 분께 좋아요.', description: '잘 익은 과실과 바닐라, 오크 향이 편안하게 이어지는 레드.',
   },
 ];
 
@@ -98,6 +98,7 @@ function renderWines() {
         <span class="wine-fact wine-fact--region"><small>지역</small><strong>${wine.region}</strong></span>
         <span class="wine-fact"><small>스타일</small><strong>${wine.style}</strong></span>
         <span class="wine-fact"><small>산미</small><strong>${wine.acidity.replace('산미 ', '')}</strong></span>
+        <span class="wine-fact"><small>당도</small><strong>${wine.sweetness}</strong></span>
         <span class="wine-fact wine-fact--score"><small>비비노 점수</small><strong>${wine.score}</strong></span>
       </div>
     </article>
