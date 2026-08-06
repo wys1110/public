@@ -18,10 +18,11 @@
   --line-light: rgba(244, 237, 226, 0.18);
   --shadow: 0 24px 70px rgba(47, 19, 37, 0.15);
   --shadow-dark: 0 24px 80px rgba(5, 0, 5, 0.32);
-  /* SandollCloud local font only; Typo Blackstone is not embedded in this public repo. */
-  --typeface: "Typo_Blackstone", "타이포_블랙스톤", "Noto Serif KR", "Noto Serif", "Apple SD Gothic Neo", serif;
-  --serif: var(--typeface);
-  --sans: var(--typeface);
+  /* SandollCloud local font first; no commercial font binary is stored in this public repo. */
+  --display-typeface: "NatureEdgeSerif", "네이처엣지세리프", "Noto Serif KR", "Noto Serif", "Apple SD Gothic Neo", serif;
+  --body-typeface: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  --serif: var(--display-typeface);
+  --sans: var(--body-typeface);
 }
 
 * { box-sizing: border-box; }
@@ -175,7 +176,7 @@ h1 em, h2 em { color: var(--wine); font-style: italic; }
 .wine-card h3 { min-height: 4.2rem; margin: 1.15rem 0 0.8rem; font-size: 1.35rem; line-height: 1.22; }
 .wine-guide { min-height: 2.65rem; margin: 0 0 0.65rem; padding: 0.48rem 0.62rem; border-left: 3px solid var(--wine-color, var(--brass)); color: var(--wine); background: rgba(198, 163, 106, 0.1); font-size: 0.74rem; font-weight: 700; line-height: 1.45; }
 .wine-guide span { display: block; margin-bottom: 0.12rem; color: var(--wine-color, var(--brass)); font-size: 0.56rem; font-weight: 900; letter-spacing: 0.04em; }
-.wine-description { display: -webkit-box; min-height: 4.5rem; margin: 0; overflow: hidden; color: var(--ink-soft); font-size: 0.72rem; line-height: 1.6; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.wine-description { display: -webkit-box; min-height: 4.5rem; margin: 0; overflow: hidden; color: var(--ink-soft); font-size: 0.9rem; line-height: 1.6; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
 .wine-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.72rem 0.6rem; margin-top: 1.2rem; }
 .wine-fact { min-width: 0; }
 .wine-fact--region { grid-column: 1 / -1; }
@@ -273,7 +274,7 @@ h1 em, h2 em { color: var(--wine); font-style: italic; }
   .wine-photo { height: 154px; }
   .wine-card h3 { min-height: 4.2rem; margin-top: 1.15rem; font-size: 1.35rem; }
   .wine-guide { min-height: 2.65rem; font-size: 0.74rem; }
-  .wine-description { min-height: 4.5rem; font-size: 0.72rem; }
+  .wine-description { min-height: 4.5rem; font-size: 0.9rem; }
   .wine-facts { gap: 0.72rem 0.6rem; }
   .wine-fact strong { font-size: 0.74rem; }
   .draw-stage { padding: 2.4rem; }
