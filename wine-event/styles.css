@@ -142,7 +142,9 @@ h1 em, h2 em { color: var(--wine); font-style: italic; }
 .wine-card--red { --wine-color: var(--wine); }
 .wine-index { display: flex; justify-content: space-between; color: var(--wine); font-family: var(--display); font-size: 1.35rem; font-style: italic; }
 .wine-kind { color: var(--ink-soft); font-family: var(--sans); font-size: 0.62rem; font-style: normal; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
-.wine-card h3 { min-height: 4.2rem; margin: 2.6rem 0 0.8rem; font-family: var(--serif); font-size: 1.45rem; font-weight: 400; line-height: 1.18; }
+.wine-photo { display: grid; height: 150px; margin: 0.85rem -0.2rem 0; place-items: center; overflow: hidden; background: rgba(255, 252, 244, 0.78); }
+.wine-photo img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0.75rem 0.8rem rgba(36, 28, 29, 0.16)); mix-blend-mode: multiply; }
+.wine-card h3 { min-height: 4.2rem; margin: 1.2rem 0 0.8rem; font-family: var(--serif); font-size: 1.45rem; font-weight: 400; line-height: 1.18; }
 .wine-guide { min-height: 2.65rem; margin: 0 0 0.65rem; padding: 0.48rem 0.62rem; border-left: 3px solid var(--copper); color: var(--wine); background: rgba(185, 148, 98, 0.1); font-size: 0.76rem; font-weight: 700; line-height: 1.45; }
 .wine-guide span { display: block; margin-bottom: 0.12rem; color: var(--copper); font-size: 0.56rem; font-weight: 900; letter-spacing: 0.04em; }
 .wine-description { display: -webkit-box; min-height: 4.5rem; margin: 0; overflow: hidden; color: var(--ink-soft); font-size: 0.74rem; line-height: 1.6; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
@@ -254,7 +256,8 @@ h1 em, h2 em { color: var(--wine); font-style: italic; }
   .section-heading-row .secondary-button, .draw-footer .primary-button { margin-top: 1.2rem; }
   .wine-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .wine-card { min-height: 320px; padding: 0.9rem; }
-  .wine-card h3 { min-height: 3.8rem; margin-top: 1.7rem; font-size: 1.15rem; }
+  .wine-photo { height: 130px; }
+  .wine-card h3 { min-height: 3.8rem; margin-top: 1rem; font-size: 1.15rem; }
   .wine-guide { min-height: 3.35rem; font-size: 0.68rem; }
   .wine-description { min-height: 4.5rem; font-size: 0.66rem; }
   .available-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
