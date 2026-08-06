@@ -26,7 +26,7 @@ const wineCatalog = [
     id: 'mcmanis', image: './assets/wines/mcmanis-viognier.png', name: '맥매니스 비오니에 2024', type: '화이트', className: 'white', region: '미국 · 캘리포니아', style: '과실 풍부', score: '3.8', acidity: '산미 2.5', guide: '향긋하고 부드러운 화이트예요.', description: '복숭아와 배의 풍성한 과실 향, 벨벳처럼 부드러운 질감.',
   },
   {
-    id: 'tapi', image: './assets/wines/tapi-sauvignon-blanc.jpg', name: '타피 소비뇽 블랑 2025', type: '화이트', className: 'white', region: '뉴질랜드 · 말보로', style: '드라이', score: '4.1', acidity: '산미 4.5', guide: '상큼하고 시원한 느낌을 좋아하면 좋아요.', description: '라임과 자몽 같은 시트러스가 또렷한 상쾌한 화이트.',
+    id: 'tapi', image: './assets/wines/tapi-sauvignon-blanc.png', name: '타피 소비뇽 블랑 2025', type: '화이트', className: 'white', region: '뉴질랜드 · 말보로', style: '드라이', score: '4.1', acidity: '산미 4.5', guide: '상큼하고 시원한 느낌을 좋아하면 좋아요.', description: '라임과 자몽 같은 시트러스가 또렷한 상쾌한 화이트.',
   },
   {
     id: 'cloudy-bay', image: './assets/wines/cloudy-bay-sauvignon-blanc.png', name: '클라우디 베이 소비뇽 블랑 2025', type: '화이트', className: 'white', region: '뉴질랜드 · 말보로', style: '드라이', score: '4.1', acidity: '산미 4.5', guide: '향이 선명하고 상큼한 화이트예요.', description: '패션프루트와 허브 향이 선명한 뉴질랜드 대표 소비뇽 블랑.',
@@ -90,7 +90,7 @@ function renderWines() {
   $('#wineGrid').innerHTML = lineup.map(({ wine, quantity }, index) => `
     <article class="wine-card wine-card--${wine.className}">
       <div class="wine-index"><span>${String(index + 1).padStart(2, '0')}</span><span class="wine-kind">${wine.type}${quantity > 1 ? ` · ${quantity}병` : ''}</span></div>
-      <div class="wine-photo"><img src="${wine.image}" alt="${wine.name} 병 사진" loading="lazy" /></div>
+      <div class="wine-photo"><img src="${wine.image}" alt="${wine.name} 병 사진" loading="eager" decoding="async" /></div>
       <h3>${wine.name}</h3>
       <p class="wine-guide"><span>쉽게 고르면</span>${wine.guide}</p>
       <p class="wine-description">${wine.description}</p>
