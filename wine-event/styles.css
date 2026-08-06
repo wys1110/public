@@ -18,8 +18,10 @@
   --line-light: rgba(244, 237, 226, 0.18);
   --shadow: 0 24px 70px rgba(47, 19, 37, 0.15);
   --shadow-dark: 0 24px 80px rgba(5, 0, 5, 0.32);
-  --serif: "Noto Serif KR", "Noto Serif", "Apple SD Gothic Neo", serif;
-  --sans: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  /* SandollCloud local font only; Typo Blackstone is not embedded in this public repo. */
+  --typeface: "Typo_Blackstone", "타이포_블랙스톤", "Noto Serif KR", "Noto Serif", "Apple SD Gothic Neo", serif;
+  --serif: var(--typeface);
+  --sans: var(--typeface);
 }
 
 * { box-sizing: border-box; }
